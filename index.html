@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Google My Maps Viewer</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: #f9f9f9;
+      margin: 0;
+      padding: 0;
+    }
+
+```
+h1 {
+  margin: 20px 0;
+  color: #333;
+}
+
+select {
+  padding: 10px;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+iframe {
+  width: 90%;
+  height: 600px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+}
+```
+
+  </style>
+</head>
+<body>
+  <h1>Google My Maps Viewer</h1>
+
+  <select id="mapSelect">
+    <option value="https://www.google.com/maps/d/u/0/edit?mid=12YxmozV1M4R0c1XrgRT5_PT4_epjaE4&ehbc=2E312F">Map 1</option>
+    <option value="https://www.google.com/maps/d/u/0/edit?mid=12YxmozV1M4R0c1XrgRT5_PT4_epjaE4&ehbc=2E312F">Map 2</option>
+    <option value="https://www.google.com/maps/d/embed?mid=YOUR_MAP_ID_3">Map 3</option>
+  </select>
+
+  <br />
+
+
+<iframe src="https://www.google.com/maps/d/u/0/embed?mid=12YxmozV1M4R0c1XrgRT5_PT4_epjaE4&ehbc=2E312F" width="640" height="480"></iframe>
+
+  <script>
+    const mapSelect = document.getElementById('mapSelect');
+    const mapFrame = document.getElementById('mapFrame');
+
+    mapSelect.addEventListener('change', function () {
+      mapFrame.src = this.value;
+    });
+  </script>
+
+</body>
+</html>
